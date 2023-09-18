@@ -1,34 +1,24 @@
 import cv2
 
+# Path for Harcascade Model
+harcascade = "model/haarcascade_russian_plate_number.xml"
+
 # Initiate OpenCV Window
-# =====================
 
 # Read Primary Camara
-cap = cv2.VideoCapture(0)
+capture = cv2.VideoCapture(0)
 
-# =====================
-# Check if the camera is opened successfully
-if not cap.isOpened():
-    print("Error: Could not open camera.")
-    exit()
+# Seting window hight and width
+capture.set(3, 640)  # (3)width
+capture.set(4, 480)  # (4)height
 
-# Loop to continuously capture frames from the camera
 while True:
-    # Read a frame from the camera
-    ret, frame = cap.read()
+    sucess, image = capture.read()
 
     # Check if the frame was read successfully
-    if not ret:
+    if not sucess:
         print("Error: Could not read frame.")
         break
 
-    # Display the frame in a window
-    cv2.imshow('Camera Feed', frame)
-
-    # Break the loop when the 'q' key is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-# Release the VideoCapture and close the OpenCV window
-cap.release()
-cv2.destroyAllWindows()
+    # Convert Image to Grey
+    greyImage = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
