@@ -8,7 +8,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Open an image using Pillow (PIL)
-image_path = './image-3.jpg'
+image_path = f"plateImages\scaned_img_1.jpg"
 
 img = Image.open(image_path)
 
@@ -21,5 +21,7 @@ output_file_path = 'extracted_text.txt'
 
 with open(output_file_path, 'w', encoding='utf-8') as file:
     file.write(text)
+
+print(text)
 
 print(f'Text saved to {output_file_path}')

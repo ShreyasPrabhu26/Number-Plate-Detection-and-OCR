@@ -91,19 +91,11 @@ while True:
         with open(output_file_path, 'w', encoding='utf-8') as file:
             file.write(text)
 
-        print(f'Text saved to {output_file_path}')
-
         print(text)
 
-        imageNumber += 1
-
-        # Save the text into File
-        output_file_path = 'extracted_text.txt'
-
-        with open(output_file_path, 'w', encoding='utf-8') as file:
-            file.write(text)
-
         print(f'Text saved to {output_file_path}')
+
+        imageNumber += 1
 
 
 # Release the VideoCapture and close the OpenCV window
