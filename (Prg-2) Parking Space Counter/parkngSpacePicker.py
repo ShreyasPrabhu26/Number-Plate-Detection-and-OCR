@@ -2,7 +2,7 @@ import cv2
 import pickle
 
 
-imgSource = f'PreProcessingImages\carParkImg.png'
+imgSource = f'PreProcessingImages\carParkImg2.png'
 
 # Width and Height of indivival car
 width, height = 107, 48
