@@ -3,7 +3,7 @@ import pickle
 import cvzone
 import numpy as np
 
-parkingVidio = f'VideoSource\carPark.mp4'
+parkingVidio = f'VideoSource\carPark2.mp4'
 
 cap = cv2.VideoCapture(parkingVidio)
 
