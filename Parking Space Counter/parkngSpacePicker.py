@@ -1,8 +1,7 @@
 import cv2
 import pickle
 
-
-imgSource = f'PreProcessingImages\carParkImg2.png'
+imgSource = f'PreProcessingImages/carParkImg2.png'
 
 # Width and Height of indivival car
 width, height = 107, 48
@@ -26,7 +25,7 @@ def mouseClick(events, x, y, flags, params):
     if events == cv2.EVENT_RBUTTONDOWN:
         for i, pos in enumerate(posList):
             x1, y1 = pos
-            if x1 < x < x1+width and y1 < y < y1+height:
+            if x1 < x < x1 + width and y1 < y < y1 + height:
                 posList.pop(i)
 
     with open("CarParkPos", "wb") as f:
@@ -39,8 +38,8 @@ while True:
         cv2.rectangle(
             img,
             pos,
-            (pos[0]+width,
-             pos[1]+height),
+            (pos[0] + width,
+             pos[1] + height),
             (255, 0, 255),
             2)
 

@@ -8,7 +8,7 @@ import pytesseract
 harcascade = "model/haarcascade_russian_plate_number.xml"
 
 # Path for Pytesseract Engine
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
 
 # Initiate OpenCV Window
 
